@@ -54,6 +54,8 @@ app.post('/todos', async (req, res) => {
 			[description]
 		);
 
+		console.log(req.body);
+
 		res.json(newTodo.rows[0]);
 	} catch (err) {
 		console.error(err.message);
